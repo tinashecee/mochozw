@@ -12,10 +12,15 @@
     "serve:mochoApp": "node dist/server.js",
     "build:client-and-server-bundles": "ng build --prod && ng run mochoApp:server:production",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
-    "start-mochoApp": "npm run build:mochoApp && npm run serve:mochoApp"
+    "start-mochoApp": "npm run build:mochoApp && npm run serve:mochoApp",
+    "postinstall":"ng build --aot --target=production"
   },
   "private": true,
   "dependencies": {
+    
+    "@angular-devkit/build-angular": "~0.12.0",
+    "@angular/cli": "~7.2.2",
+    "@angular/compiler-cli": "^7.2.6",
     "@angular/animations": "^7.2.2",
     "@angular/cdk": "^7.2.2",
     "@angular/common": "~7.2.0",
@@ -40,6 +45,7 @@
     "bufferutil": "^4.0.1",
     "compression": "^1.7.3",
     "core-js": "^2.5.4",
+    "express":"4.16.4",
     "firebase": "^5.8.0",
     "hammerjs": "^2.0.8",
     "imagesloaded": "^4.1.4",
@@ -56,8 +62,16 @@
     "tslib": "^1.9.0",
     "utf-8-validate": "^5.0.2",
     "ws": "^6.1.3",
+    "twitter": "^1.7.1",
     "xmlhttprequest": "^1.8.0",
-    "zone.js": "~0.8.26"
+    "typescript": "~3.2.2",
+    "zone.js": "~0.8.26",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "ts-node": "~7.0.0",
+    "body-parse": "^0.1.0",
+    "body-parser": "^1.18.3",
+    "filter-env": "^1.1.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.12.0",
@@ -87,5 +101,9 @@
     "twitter": "^1.7.1",
     "typescript": "~3.2.2",
     "webpack-cli": "^3.2.1"
+  },
+  "engines":{
+    "node":"8.11.3",
+    "npm":"6.8.0"
   }
 }
