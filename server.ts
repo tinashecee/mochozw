@@ -15,7 +15,7 @@ var Twitter = require('twitter');
 dotenv.config();
 const config = filterEnv(/(BB_\w+)/, {json: true, freeze: true});
 
-const PORT = process.env.BB_PORT || 8000 || process.env.PORT;
+const PORT = process.env.BB_PORT || 8000 ;
 const request=require('request');
 var bodyParser = require('body-parser');
 // Provide support for window on the server
