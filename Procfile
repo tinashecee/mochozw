@@ -1,1 +1,1 @@
-web:npm run start-mochoApp
+web:node dist/server.js
