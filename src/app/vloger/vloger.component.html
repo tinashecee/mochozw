@@ -1,0 +1,48 @@
+
+<br>
+<br>
+<div class="container" *ngFor="let v of videos;let i=index" >
+   
+        <div *ngIf="i<1" class="outer">
+            <div class="content animated fadeInLeft">
+                <span class="bg animated fadeInDown">EXCLUSIVE</span>
+                <h3 style="font-family:'K2D',sans-serif">{{v.channelTitle}}</h3>
+                <p style="font-family:'K2D',sans-serif">Follow@</p>
+                
+                <div class="button">
+                    <a href="{{v.youtube}}"><img src="../../assets/icons/youtube.png"></a>
+                    <a href="{{v.twitter}}"><img src="../../assets/icons/twitter.png"></a>
+                    <a href="{{v.instagram}}"><img src="../../assets/icons/instagram (1).png"></a>
+                    <a href="{{v.facebook}}"><img src="../../assets/icons/facebook (1).png"></a>
+                </div>
+                
+            </div>
+            <img src="{{v.pic}}" width="300px" class="new animated fadeInRight">
+        </div>
+</div>
+<mat-divider></mat-divider>
+<div class="row example-form ">
+    <div *ngFor="let v of videos" class=" col s12 m3">
+      <button (click)="setDrip(v);" onclick="modd();" style="background-color:transparent;border:none">
+<div  style="width:200px;"  class=" container " style="padding:10px" >
+ 
+    <div class="hovereffect">
+        <img class="img-responsive" src="{{v.thumb}}" alt="">
+		
+        <div class="overlay">
+           <h2>{{v.channelTitle}}</h2>
+           <p class="info" >{{v.title}}</p>
+        </div>
+		
+    </div>
+	 <table style="padding-top:0px;margin-top:0px"><tbody>
+      <tr><td> <p style="font-family:'K2D',sans-serif;font-size:11px;line-height: 5px">{{v.publishedAt}}</p></td><td> <p style="font-family:'K2D',sans-serif;font-size:11px;line-height: 5px">v.views</p></td></tr></table>	
+
+  </div>
+</button>
+</div>
+</div>
+<div id="myModal" class="modal">
+    <button  onclick="cloz();nohomo();" class="close">&times;</button>
+  <iframe id="playerid" allowFullScreen="allowFullScreen" [src]="drip | safeUrl" width="300" height="215" allowtransparency="true" frameborder="0"></iframe>
+  </div>

@@ -1,0 +1,38 @@
+
+<br />
+<br />
+<p id="clip">Mocho Artist</p>
+<br/>
+
+<mat-divider></mat-divider>
+<br/>      
+    
+<ngb-tabset style="max-width: 900px;
+  padding: auto;
+  margin: auto;z-index:10">
+ 
+  <br/>
+  <ngb-tab >
+     <br/>
+      <ng-template ngbTabContent>
+     
+                      <br/>  
+                    <div class="row example-form">
+                      <div class="col s12 m3" *ngFor="let item of artists">
+           <a (click)="loadPlaylist(item)"  [routerLink]="['/artist']">
+        <div class="hovereffect">
+          <img class="img-responsive" src="{{item.pic}}" alt="">
+      
+          <div class="overlay">
+             <h2>{{item.name}}</h2>
+             <p class="info">{{item.desc}}</p>
+          </div>
+          <h6 style="font-family:'K2D',sans-serif;color:black">{{item.name}}</h6>
+      </div>
+      
+    </a>
+    </div>
+  </div>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset><br/><br/>

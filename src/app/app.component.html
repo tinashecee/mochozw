@@ -1,21 +1,68 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches"  >
+  <mat-toolbar style="background-color: #fedc3d" class="example-toolbar  ">
+    <button style="background-color: transparent" mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <h1 class="example-app-name"><a class="py-2 " [routerLink]="['/']" style="font-family: 'Ubuntu', sans-serif; color:black;font-size: 32px;font-weight: bold;">
+      <div><img  src="../assets/icons/LeMocho.png"></div>
+   </a></h1>
+   <div  class="py-2  " style="position:relative;padding:auto;margin:auto"><button class="launch"   data-toggle="modal" style="background-color:transparent;border:none" data-target="#myModal"><img src="../assets/icons/musica-searcher.png"></button></div>
+   
 
-<router-outlet></router-outlet>
+  </mat-toolbar>
+
+  <mat-sidenav-container  [hasBackdrop]="false" class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav   style="background-color:black" #snav [mode]="mobileQuery.matches ? 'side' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list>
+        <a mat-list-item style="font-family: 'K2D', sans-serif;color:white;font-size:22px" routerLink='/'>home</a>
+        <a mat-list-item style="font-family: 'K2D', sans-serif;color:white;font-size:22px" routerLink="/music" >music</a>
+        <a mat-list-item style="font-family: 'K2D', sans-serif;color:white;font-size:22px"  routerLink='/channels' >channels</a>
+        <a mat-list-item style="font-family: 'K2D', sans-serif;color:white;font-size:22px" routerLink='/' >arts</a>
+        
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div id="page" class="route-container" style="background-color: #fedc3d" [@routeAnimation]="getDepth(myOutlet)">
+        <router-outlet  #myOutlet="outlet"></router-outlet>
+       <br>
+      <div class="container-fluid row " style="position:relative;bottom: 0%; margin:0px;padding: 0px;width:100%">
+        
+        <div class="col s12 m12">
+          <img class="mb-2" src="../../assets/icons/apple-icon.png" alt="" width="24" height="24">
+          <small class="d-block mb-3 text-muted">&copy; <p style="font-family:'Ubuntu',sans-serif;color:#1A174B">Mocho 2018</p></small>
+        </div>
+        
+        <div class="col s4 m4">
+          <h5 style="font-family:'Ubuntu',sans-serif; color:#1A174B">Services</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" [routerLink]="['/contacts']"><p style="font-family:'Ubuntu',sans-serif;color:#1A174B">Advertise</p></a></li>
+            <li><a class="text-muted" [routerLink]="['/contacts']"><p style="font-family:'Ubuntu',sans-serif;color:#1A174B">Contact Us</p></a></li>
+            
+          </ul>
+        </div>
+        <div class="col s4 m4">
+          <h5><p style="font-family:'Ubuntu',sans-serif;color:#1A174B">About</p></h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#"><p style="font-family:'Ubuntu',sans-serif;color:#1A174B">Team</p></a></li>
+            <li><a class="text-muted" [routerLink]="['/privacy']"><p style="font-family:'Ubuntu',sans-serif;color:#1A174B">Privacy</p></a></li>
+            <li><a class="text-muted" [routerLink]="['/t&c']"><p style="font-family:'Ubuntu',sans-serif;color:#1A174B">Terms</p></a></li>
+          </ul>
+          <br><br>
+        </div>
+        <div class="col-4 col-md">
+          <h5><p style="font-family:'Ubuntu',sans-serif;color:#1A174B">Follow</p></h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#"><img src="../assets/icons/facebook.png"></a></li>
+            <li><a class="text-muted" href="#"><img src="../assets/icons/twitter.png"></a></li>
+            <li><a class="text-muted" href="#"><img src="../assets/icons/youtube.png"></a></li>
+          </ul>
+          <br><br>
+        </div>
+      </div>
+    </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+

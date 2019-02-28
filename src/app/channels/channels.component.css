@@ -1,0 +1,212 @@
+
+ 
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    top:65px;
+    left:0px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+    transition: width 2s;
+    -webkit-transition: height 2s; 
+}
+.example-form {
+  max-width: 900px;
+  padding: auto;
+  margin: auto;
+}
+ Modal Content (image)
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    
+} 
+
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+  
+ 
+  
+ 
+ .example-button-toggle-label {
+    display: inline-block;
+    margin: 16px;
+  }
+ .example-large-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+
+  .example-card {
+    max-width: 400px;
+    border-top:2px solid orange;
+  }
+  img{
+    border-radius: 12px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+  img {
+    width: 100%;
+    height: auto;
+}
+::ng-deep .nav-fill .nav-link.active {
+    margin-top: -1px;
+    border-top: 2px solid #fedc3d;
+}
+
+::ng-deep .nav-pills .nav-link.active, 
+::ng-deep .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #fedc3d;
+}
+p{ margin: 0px; }
+#clip{
+    /*
+    Ensure background is added first
+    */  
+    background: linear-gradient(to bottom, #eee, rgba(222,112,6,0.2), #de7006),url(https://media.giphy.com/media/BlcWQ9L2VfOFO/giphy.gif);
+    
+     background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'K2D', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    z-index:2000;
+  }
+  #clip1{
+    /*
+    Ensure background is added first
+    */  
+    background: linear-gradient(to bottom, #eee, rgba(222,112,6,0.2), #de7006),url(https://media.giphy.com/media/l1J9xRxf0x8zMnA4g/giphy.gif);
+    
+     background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'K2D', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    
+  }
+
+ 
+.hovereffect {
+    width:220px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+  }
+  
+  .hovereffect .overlay {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  
+  .hovereffect img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+  }
+  
+  .hovereffect:hover img {
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+    filter: grayscale(1) blur(3px);
+    -webkit-filter: grayscale(1) blur(3px);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  
+  .hovereffect h2 {
+    text-align: center;
+    position: relative;
+    font-family: 'K2D',sans-serif;
+    margin-top:0;
+    padding-top:0;
+    font-size: 21px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+body{
+  background-color: black;
+}
+  .hovereffect p.info {
+    display: inline-block;
+    text-decoration: none;
+    padding:0;
+    font-family: 'K2D',sans-serif;
+    margin: 10px 0 0 0;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 18px;
+  }
+  
+  .hovereffect p.info:hover {
+    box-shadow: 0 0 5px #fff;
+  }
+  
+  .hovereffect p.info, .hovereffect h2 {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .hovereffect:hover p.info, .hovereffect:hover h2 {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  html,body{
+    background-image: url(../../assets/icons/Clouds.jpg); 
+  }
+  

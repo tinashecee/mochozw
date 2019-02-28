@@ -1,0 +1,40 @@
+
+<br />
+<br />
+<p id="clip">Reality in Motion</p>
+<br/>
+
+<mat-divider></mat-divider>
+<br/>      
+    
+<ngb-tabset style="max-width: 900px;
+  padding: auto;
+  margin: auto;z-index:10">
+ 
+  <br/>
+  <ngb-tab >
+      <ng-template ngbTabTitle><p id="clip1">top Vlogers</p> </ng-template>
+      <br/>
+      <ng-template ngbTabContent>
+     
+                      <br/>  
+                    <div class="row example-form">
+                      <div class="col s12 m3" *ngFor="let item of vlogers">
+           <a (click)="loadPlaylist(item)"  [routerLink]="['/vloger']">
+        <div class="hovereffect">
+          <img class="img-responsive" src="{{item.pic}}" alt="">
+      
+          <div class="overlay">
+             <h2>{{item.name}}</h2>
+             <p class="info">{{item.desc}}</p>
+          </div>
+          <h6 style="font-family:'K2D',sans-serif;color:black">{{item.name}}</h6>
+      </div>
+      
+    </a>
+    </div>
+  </div>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset><br/><br/>
+

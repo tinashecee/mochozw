@@ -1,0 +1,451 @@
+<br>
+<br>
+<br>
+<div class="example-form container mat-elevation-z4"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayoutGap.xs="0" style="background-color:#fedc3d">
+	<div fxFlex.sm="100%"  fxFlex.xs="100%" fxFlex.md="100%" fxFlex.xl="100%" fxFlex.lg="100%">
+			<mat-tab-group color="accent">
+						<mat-tab  *ngFor="let l of _tweets | async;  let i=index"> 
+								<ng-template mat-tab-label>
+									<h6 *ngIf="i<1" style="font-family: 'K2D',sans-serif;color: black;">Trending Topics  &nbsp;</h6> <p style="font-family: 'K2D',sans-serif;color: black;">#{{l.tag}}</p>
+									  </ng-template>
+		
+									  <ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="l.tweets">
+											<div class="case1 "  *nguCarouselDef="let item; let i=index" class="item">
+												<ngx-tweet tweetId="{{item}}"></ngx-tweet>
+											</div> 
+											<button NguCarouselNext class="rightRs "><img src="../../assets/icons/right-arrow (3).png"></button>
+											<button NguCarouselPrev class=" leftRs "><img src="../../assets/icons/left-arrow (1).png"></button>
+										</ngu-carousel>	
+				</mat-tab>
+			</mat-tab-group>
+			
+	</div>
+</div>
+<br>
+ <mat-divider></mat-divider>
+ <br>
+ <div class="example-form container mat-elevation-z4"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayoutGap.xs="0"
+style="background-color: #fedc3d"
+>
+<div fxFlex.sm="100%"  fxFlex.xs="100%" fxFlex.md="100%" fxFlex.xl="100%" fxFlex.lg="100%">
+	<mat-tab-group color="warn">
+		<mat-tab > 
+				<ng-template mat-tab-label>
+					<h6 style="font-family: 'K2D',sans-serif;color:black">Top Twitters <mat-icon>trending_up</mat-icon></h6>
+					  </ng-template>
+					 
+	<ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="_tweets1 | async">
+											<div class="case1 "  *nguCarouselDef="let item; let i=index" class="item">
+												<ngx-tweet tweetId="{{item}}"></ngx-tweet>
+											</div> 
+											<button NguCarouselNext class="rightRs "><img src="../../assets/icons/right-arrow (3).png"></button>
+											<button NguCarouselPrev class=" leftRs "><img src="../../assets/icons/left-arrow (1).png"></button>
+										</ngu-carousel>	
+				
+			</mat-tab>
+			</mat-tab-group>
+	</div>
+</div> 
+<br>
+<mat-divider></mat-divider>
+<br>
+<div class="example-form container mat-elevation-z4"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayoutGap.xs="0" style="background-color:#fedc3d">
+	<div fxFlex.sm="100%"  fxFlex.xs="100%" fxFlex.md="100%" fxFlex.xl="100%" fxFlex.lg="100%">
+			<mat-tab-group color="accent">
+						<mat-tab  *ngFor="let l of _tweetsnews | async;  let i=index"> 
+								<ng-template mat-tab-label>
+									<h6 *ngIf="i<1" style="font-family: 'K2D',sans-serif;color: black;">Trending News  &nbsp;</h6> <p style="font-family: 'K2D',sans-serif;color: black;">#{{l.tag}}</p>
+									  </ng-template>
+		
+									  <ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="l.tweets">
+											<div class="case1 "  *nguCarouselDef="let item; let i=index" class="item">
+												<ngx-tweet tweetId="{{item}}"></ngx-tweet>
+											</div> 
+											<button NguCarouselNext class="rightRs "><img src="../../assets/icons/right-arrow (3).png"></button>
+											<button NguCarouselPrev class=" leftRs "><img src="../../assets/icons/left-arrow (1).png"></button>
+										</ngu-carousel>	
+				</mat-tab>
+			</mat-tab-group>
+			
+	</div>
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+<div class="example-form container"><h5 style="font-family:'K2D',sans-serif;color:black">Top Upcoming Events</h5></div>
+<div class="example-form container mat-elevation-z4" style="background-color:#fedc3d">
+<ngu-carousel #myCarousel1 [inputs]="carouselConfig" [dataSource]="[1,2,3,4,5]">
+	<div *nguCarouselDef="let item;" class="item">
+				<div class="card medium sticky-action">
+					<div class="card-image" >
+						<img src="https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/48315847_2277676685664071_6819019211063427072_n.jpg?_nc_cat=108&_nc_ht=scontent-jnb1-1.xx&oh=7e55b8218a0bbd2b4e19d3d7793c476c&oe=5CA67E1A">
+						
+					</div>
+					<div class="card-content">
+	
+						<table >
+							
+							<tbody>
+								<tr>
+									<td>Alvin</td>
+									<td>19:20</td>
+									<td>Harare</td>
+								</tr>
+							
+							</tbody>
+						</table></div>
+					<div class="card-action">
+						<a href="#">Find out more</a>
+					</div>
+		</div>
+	</div>
+	<button NguCarouselNext class="rightRs "><img src="../../assets/icons/right-arrow (3).png"></button>
+	<button NguCarouselPrev class=" leftRs "><img src="../../assets/icons/left-arrow (1).png"></button>
+
+</ngu-carousel>
+
+</div>
+<br>
+<br>
+<div class="example-form container mat-elevation-z4"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayoutGap.xs="0"
+style="background-color: #fedc3d"
+>
+
+<div   fxFlex.sm="100%"  fxFlex.xs="100%" fxFlex.md="100%" fxFlex.xl="100%" fxFlex.lg="100%">
+	<mat-tab-group color="warn">
+		<mat-tab > 
+				<ng-template mat-tab-label>
+					<h6 style="font-family: 'K2D',sans-serif;color:black">Latest Videos <mat-icon>grade</mat-icon></h6>
+					  </ng-template>
+	<ngu-carousel #myCarousel2 [inputs]="carouselConfig" [dataSource]="videos">
+				<div   *nguCarouselDef="let v; let i=index" class="item">
+						<button (click)="setDrip(v);" onclick="modd();" style="background-color:transparent;border:none">
+								<div  style="width:200px;"  class=" container " style="padding:10px" >
+								 
+										<div class="hovereffect">
+												<img class="img-responsive" src="{{v.thumb}}" alt="">
+										
+												<div class="overlay">
+													 <h2>{{v.channelTitle}}</h2>
+													 <p class="info" >{{v.title}}</p>
+												</div>
+										
+										</div>
+										<p style="font-family:'K2D',sans-serif;font-size:11px;line-height: 5px">{{v.publishedAt}}</p>	
+													
+									</div>
+								</button></div> 
+								<button NguCarouselNext class="rightRs "><img src="../../assets/icons/right-arrow (3).png"></button>
+											<button NguCarouselPrev class=" leftRs "><img src="../../assets/icons/left-arrow (1).png"></button>
+										</ngu-carousel>	
+	</mat-tab>
+	</mat-tab-group>
+	</div>
+	</div>
+	<br>
+	<div class="example-form container mat-elevation-z4"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayoutGap.xs="0"
+style="background-color: #fedc3d">
+	<div fxFlex.sm="100%"  fxFlex.xs="100%" fxFlex.md="60%" fxFlex.xl="60%" fxFlex.lg="60%">
+		<h1>Ad Space For Sale</h1>
+	</div>
+	<div fxFlex.gt-sm="100%"  fxFlex.xs="100%" fxFlex.md="40%" fxFlex.xl="40%" fxFlex.lg="40%" >
+			
+		<mat-tab-group color="warn">
+					<mat-tab > 
+							<ng-template mat-tab-label>
+									Trending <mat-icon>trending_up</mat-icon>
+								  </ng-template>
+						<div class="collection trending" style="height:270px;width:100%;overflow:scroll" >
+							<div *ngFor="let v of videos ;  let i=index">
+							<a (click)="setDrip(v);" onclick="modd();"  class="collection-item" > 
+									<span  class="title" black-text >{{v.channelTitle}} <p class="secondary-content">{{v.views}} views</p></span>
+									<p  style="text-overflow : ellipsis;
+									white-space   : nowrap;
+									overflow      : hidden; ">{{v.title}}
+									</p>
+								</a></div>
+									</div></mat-tab>
+					<mat-tab> 
+							<ng-template mat-tab-label>
+									Top Vlogers <mat-icon>grade</mat-icon>
+								  </ng-template>
+						<div class="collection container"   style="height:270px;width:100%;overflow:scroll" >
+							<a (click)="loadPlaylist(v)" *ngFor="let v of videos |sortPipe:path:order;  let i=index" [routerLink]="['/vloger']" class="collection-item " > 
+								<table  style="padding-top:0px;margin-top:0px"><tbody>
+										<tr><td> <p style="font-family:'K2D',sans-serif;font-size:11px;line-height: 5px">{{v.channelTitle}}</p></td><td> <p style="font-family:'K2D',sans-serif;font-size:11px;line-height: 5px">{{v.subscribers}} followers</p></td></tr></table>	
+								
+							</a>
+						</div></mat-tab>
+				</mat-tab-group>
+				
+	</div>
+</div>
+<br>
+<div class="example-form container mat-elevation-z4"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayoutGap.xs="0"
+style="background-color: #fedc3d">
+	<div fxFlex.sm="100%"  fxFlex.xs="100%" fxFlex.md="100%" fxFlex.xl="100%" fxFlex.lg="100%">
+			<mat-tab-group color="warn">
+						<mat-tab  *ngFor="let l of tagVideos;  let i=index"> 
+								<ng-template mat-tab-label>
+									<h6 *ngIf="i<1" style="font-family: 'K2D',sans-serif;color: black;">Trending Videos  &nbsp;</h6> <p style="font-family: 'K2D',sans-serif;color: black;">#{{l.tag}}</p>
+									  </ng-template>
+										<ngu-carousel #myCarousel3 [inputs]="carouselConfig" [dataSource]="l.videos">
+												<div   *nguCarouselDef="let v; let i=index" class="item">
+														<button (click)="setDrip(v);" onclick="modd();" style="background-color:transparent;border:none">
+																<div  style="width:200px;"  class=" container " style="padding:10px" >
+																 
+																		<div class="hovereffect">
+																				<img class="img-responsive" src="{{v.thumb}}" alt="">
+																		
+																				<div class="overlay">
+																					 <h2>{{v.channelTitle}}</h2>
+																					 <p class="info" >{{v.title}}</p>
+																				</div>
+																		
+																		</div>
+																		<p style="font-family:'K2D',sans-serif;font-size:11px;line-height: 5px">{{v.publishedAt}}</p>	
+													
+																	</div>
+																</button></div> 
+																<button NguCarouselNext class="rightRs "><img src="../../assets/icons/right-arrow (3).png"></button>
+																<button NguCarouselPrev class=" leftRs "><img src="../../assets/icons/left-arrow (1).png"></button>
+															</ngu-carousel>	
+				</mat-tab>
+			</mat-tab-group>
+			
+	</div>
+</div>
+<br>
+<br>
+<!-- Music Section-->
+<div class="example-form container"><h5 style="font-family: 'K2D',sans-serif;color:black">Music</h5></div>
+<br>
+<div class="example-form  mat-elevation-z4"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayoutGap.xs="0"
+style="background-color: #fedc3d">
+<div fxFlex.sm="100%"  fxFlex.xs="100%" fxFlex.md="60%" fxFlex.xl="60%" fxFlex.lg="60%">
+<h1>Ad Space For Sale</h1></div>
+<div fxFlex.gt-sm="100%"  fxFlex.xs="100%" fxFlex.md="40%" fxFlex.xl="40%" fxFlex.lg="40%" >
+		
+	<mat-tab-group color="warn">
+				<mat-tab > 
+						<ng-template mat-tab-label>
+								Download Latest Singles<mat-icon>music_note</mat-icon>
+								</ng-template>
+					<div class="collection trending" style="height:270px;width:100%;overflow:scroll" >
+						<a href="{{v.link}}"  *ngFor="let v of singles " class="collection-item" > 
+								<span  class="title" black-text >{{v.artist}} </span>
+								<p  style="text-overflow : ellipsis;
+								white-space   : nowrap;
+								overflow      : hidden; ">{{v.title}}
+								</p>
+							</a>
+								</div></mat-tab>
+				<mat-tab> 
+						<ng-template mat-tab-label>
+								Download Latest Albums <mat-icon>disc_full</mat-icon>
+								</ng-template>
+					<div class="collection container"   style="height:270px;width:100%;overflow:scroll" >
+						<a (click)="loadPlaylist(v)" *ngFor="let v of albums" [routerLink]="['/vloger']" class="collection-item " > 
+							<span  class="title" black-text >{{v.artist}} </span>
+							<p  style="text-overflow : ellipsis;
+							white-space   : nowrap;
+							overflow      : hidden; ">{{v.title}}
+							</p>
+							
+						</a>
+					</div></mat-tab>
+			</mat-tab-group>
+			
+</div>
+</div>
+<br>
+<br>
+<div class="example-form container mat-elevation-z4"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayoutGap.xs="0"
+style="background-color: #fedc3d">
+
+<div   fxFlex.sm="100%"  fxFlex.xs="100%" fxFlex.md="100%" fxFlex.xl="100%" fxFlex.lg="100%">
+	<mat-tab-group color="warn">
+		<mat-tab > 
+				<ng-template mat-tab-label>
+					<h6  style="font-family: 'K2D',sans-serif;color: black;"> Exclusive Videos</h6>
+						</ng-template>
+						<ngu-carousel #myCarousel4 [inputs]="carouselConfig" [dataSource]="videos1">
+								<div   *nguCarouselDef="let v; let i=index" class="item">
+										<button (click)="setDrip(v);" onclick="modd();" style="background-color:transparent;border:none">
+												<div  style="width:200px;"  class=" container " style="padding:10px" >
+												 
+														<div class="hovereffect">
+																<img class="img-responsive" src="{{v.thumb}}" alt="">
+														
+																<div class="overlay">
+																	 <h2>{{v.channelTitle}}</h2>
+																	 <p class="info" >{{v.title}}</p>
+																</div>
+														
+														</div>
+														<p style="font-family:'K2D',sans-serif;font-size:11px;line-height: 5px">{{v.publishedAt}}</p>	
+													
+													</div>
+												</button></div> 
+												<button NguCarouselNext class="rightRs "><img src="../../assets/icons/right-arrow (3).png"></button>
+											<button NguCarouselPrev class=" leftRs "><img src="../../assets/icons/left-arrow (1).png"></button>
+										</ngu-carousel>	
+								</mat-tab>
+							</mat-tab-group>
+	</div>
+	</div>
+
+<br>
+<div class="example-form container mat-elevation-z4"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayoutGap.xs="0"
+style="background-color: #fedc3d">
+	<div fxFlex.sm="100%"  fxFlex.xs="100%" fxFlex.md="100%" fxFlex.xl="100%" fxFlex.lg="100%">
+		<mat-tab-group color="warn">
+			<mat-tab > 
+					<ng-template mat-tab-label>
+						<h6  style="font-family: 'K2D',sans-serif;color: black;">Trending Music Videos</h6>
+						  </ng-template>
+							<ngu-carousel #myCarousel5 [inputs]="carouselConfig" [dataSource]="videos2">
+									<div   *nguCarouselDef="let v; let i=index" class="item">
+											<button (click)="setDrip(v);" onclick="modd();" style="background-color:transparent;border:none">
+													<div  style="width:200px;"  class=" container " style="padding:10px" >
+													 
+															<div class="hovereffect">
+																	<img class="img-responsive" src="{{v.thumb}}" alt="">
+															
+																	<div class="overlay">
+																		 <p class="info" >{{v.title}}</p>
+																	</div>
+															
+															</div>
+													<p style="font-family:'K2D',sans-serif;font-size:11px;line-height: 5px">{{v.publishedAt}}</p>	
+													
+														</div>
+													</button></div> 
+													<button NguCarouselNext class="rightRs "><img src="../../assets/icons/right-arrow (3).png"></button>
+											<button NguCarouselPrev class=" leftRs "><img src="../../assets/icons/left-arrow (1).png"></button>
+										</ngu-carousel>	
+						</mat-tab>
+					</mat-tab-group>			
+	</div>
+</div>
+<br>
+<br>
+<div class="example-form container mat-elevation-z4"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayoutGap.xs="0"
+style="background-color: #fedc3d"
+>
+	<div fxFlex.sm="100%"  fxFlex.xs="100%" fxFlex.md="100%" fxFlex.xl="100%" fxFlex.lg="100%">
+		<mat-tab-group color="warn">
+			<mat-tab > 
+					<ng-template mat-tab-label>
+						<h6 style="font-family: 'K2D',sans-serif;color:black">Exclusive Music Tweets </h6>
+						  </ng-template>
+						 
+		<ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="_tweets2 | async">
+												<div class="case1 "  *nguCarouselDef="let item; let i=index" class="item">
+													<ngx-tweet tweetId="{{item}}"></ngx-tweet>
+												</div> 
+												<button NguCarouselNext class="rightRs "><img src="../../assets/icons/right-arrow (3).png"></button>
+												<button NguCarouselPrev class=" leftRs "><img src="../../assets/icons/left-arrow (1).png"></button>
+											</ngu-carousel>	
+					
+				</mat-tab>
+				</mat-tab-group>
+							</div>
+							</div>
+<br>
+<br>
+<div class="example-form container"><h5 style="font-family: 'K2D',sans-serif;color:black">Latest Arts</h5></div>
+<div class="example-form container mat-elevation-z4"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayoutGap.xs="0"
+style="background-color: #fedc3d">
+	<div fxFlex.sm="100%"  fxFlex.xs="100%" fxFlex.md="100%" fxFlex.xl="100%" fxFlex.lg="100%">
+		<mat-tab-group color="warn">
+			<mat-tab  *ngFor="let l of tagArts;  let i=index"> 
+					<ng-template mat-tab-label>
+						<h6 *ngIf="i<1" style="font-family: 'K2D',sans-serif;color: black;">Trending Videos </h6> <p style="font-family: 'K2D',sans-serif;color: black;">{{l.tag}}</p>
+						  </ng-template>
+							<ngu-carousel #myCarousel6 [inputs]="carouselConfig" [dataSource]="l.videos">
+									<div   *nguCarouselDef="let v; let i=index" class="item">
+											<button (click)="setDrip(v);" onclick="modd();" style="background-color:transparent;border:none">
+													<div  style="width:200px;"  class=" container " style="padding:10px" >
+													 
+															<div class="hovereffect">
+																	<img class="img-responsive" src="{{v.thumb}}" alt="">
+															
+																	<div class="overlay">
+																		 <h2>{{v.channelTitle}}</h2>
+																		 <p class="info" >{{v.title}}</p>
+																	</div>
+															
+															</div>
+													<p style="font-family:'K2D',sans-serif;font-size:11px;line-height: 5px">{{v.publishedAt}}</p>	
+													
+														</div>
+													</button></div> 
+													<button NguCarouselNext class="rightRs "><img src="../../assets/icons/right-arrow (3).png"></button>
+											<button NguCarouselPrev class=" leftRs "><img src="../../assets/icons/left-arrow (1).png"></button>
+										</ngu-carousel>	
+	</mat-tab>
+</mat-tab-group>			
+	</div>
+</div>
+	<br>
+	<div class="example-form container mat-elevation-z4"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayoutGap.xs="0"
+style="background-color: #fedc3d">
+	<div fxFlex.sm="100%"  fxFlex.xs="100%" fxFlex.md="100%" fxFlex.xl="100%" fxFlex.lg="100%">
+		<h1>Ad Space For Sale</h1></div>
+	
+</div>
+<br>
+<br>
+<div id="myModal" class="modal">
+	<button  onclick="cloz();nohomo();" class="close">&times;</button>
+<iframe id="playerid" allowFullScreen="allowFullScreen" [src]="drip | safeUrl" width="300" height="215" allowtransparency="true" frameborder="0"></iframe>
+</div>

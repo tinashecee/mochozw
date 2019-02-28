@@ -1,0 +1,12 @@
+{
+    "name": "Mocho",
+    "short_name": "mocho",
+    "theme_color": "#fedc3d",
+    "background_color": "#fedc3d",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+     
+    ]
+   }

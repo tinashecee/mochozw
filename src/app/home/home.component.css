@@ -1,0 +1,446 @@
+#cliptweet{
+    /*
+    Ensure background is added first
+    */  
+    background: linear-gradient(to bottom, #eee, rgba(222,112,6,0.2), #de7006),url(https://media.giphy.com/media/6wpHEQNjkd74Q/giphy.gif);
+    
+     background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'K2D', sans-serif;
+    margin-top: 40px;
+    padding-top: 40px;
+    font-size: 35px;
+    padding-left: 60px;
+    font-weight: bold;
+  }
+  .item {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  .leftRs {
+          position: absolute;
+          margin: auto;
+          top: 0;
+          bottom: 0;
+          width: 50px;
+          background-color: transparent;
+          height: 50px;
+          border:none;
+          border-radius: 999px;
+          left: 0;
+      }
+   
+      .rightRs {
+          position: absolute;
+          margin: auto;
+          top: 0;
+          bottom: 0;
+          width: 50px;
+          height: 50px;
+          border:none;
+          background-color: transparent;
+          border-radius: 999px;
+          right: 0;
+      }
+  
+  
+  .myPoint {
+    list-style-type: none;
+    text-align: center;
+    padding: 12px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+  .myPoint  li {
+      display: inline-block;
+      border-radius: 50%;
+      border: 2px solid rgba(0, 0, 0, 0.55);
+      padding: 4px;
+      margin: 0 3px;
+      transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+      transition: 0.4s;
+  }
+  .myPoint  li.active {
+        background: #6b6b6b;
+        transform: scale(1.2);
+      }
+      .bannerStyle h1 {
+        background-color: #ccc;
+        min-height: 300px;
+        text-align: center;
+        line-height: 300px;
+    }
+    
+    div.case1{
+      width:200px ;
+      height:300px;
+  }
+  .case1 a {
+    word-break: break-all;
+    color:blue;
+  }
+#clip{
+    
+  background: linear-gradient(to bottom, #eee, rgba(222,112,6,0.2), #de7006),url(https://media.giphy.com/media/3o85xJY1FaLzqeoBGw/giphy.gif);
+  
+   background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: 'K2D', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 60px;
+}
+p{
+  font-family: 'K2D',sans-serif;
+}
+.example-form {
+  max-width: 900px;
+  padding: auto;
+  margin: auto;
+}
+.trending a {
+  background-color: white;
+color: black;
+text-decoration: none;
+}
+a:hover .trending{
+  color:blue;
+text-decoration: none;
+}
+
+.a:active .trending{
+}
+
+.a:visited .trending{
+background-color: #ccc;
+}
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+drag-scroll {
+  height: 300px;
+   width: 100%;
+   overflow-x:auto; 
+  }
+   #cliptoday{
+    /*
+    Ensure background is added first
+    */  
+    background: linear-gradient(to bottom, #eee, rgba(222,112,6,0.2), #de7006),url(https://media.giphy.com/media/l1J9xRxf0x8zMnA4g/giphy.gif);
+    
+     background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'K2D', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .example-card {
+    max-width: 200px;
+    height:100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+  p{font-family:'K2D',sans-serif;}
+  mat-card-title{
+    font-size: 15px;
+    font-family: 'K2D',sans-serif;
+  }
+
+  .row {
+    overflow: scroll;
+    width: 100%;
+  }
+  .row__inner {
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
+    font-size: 0;
+    white-space: nowrap;
+    margin: 20.3125px 10px;
+    padding: 10px;
+   
+  }
+  .tile {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 160px;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 450ms all;
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+  }
+  .tile__img {
+    width: 220px;
+    height: 140px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .tile__details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size: 10px;
+    opacity: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    transition: 450ms opacity;
+  }
+  .tile__details:after,
+  .tile__details:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: #000;
+  }
+  .tile__details:after {
+    margin-top: -25px;
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #ecf0f1;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+  }
+  .tile__details:before {
+    content: '▶';
+    left: 0;
+    width: 100%;
+    font-size: 30px;
+    margin-left: 4px;
+    margin-top: -24px;
+    text-align: center;
+  }
+  .tile .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    z-index:100;
+  }
+  
+  .tile .btn:hover {
+  }
+  .tile:hover .tile__details {
+    display:block;
+    opacity: .8;
+    background-color: #000;
+    color:white;
+    font-family:'K2D',sans-serif;
+    padding-left:15px;
+    font-size:9px;
+    overflow-wrap: break-word;
+  word-wrap: break-word; 
+  }
+  .tile__title {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    padding: 10px;
+    left: 5px;
+  }
+  .tile__title1 {
+    position: absolute;
+    top: 2px;
+    padding: 10px;
+    right: 5px;
+  }
+  .row__inner:hover {
+    -webkit-transform: translate3d(-62.5px, 0, 0);
+            transform: translate3d(-62.5px, 0, 0);
+  }
+  .row__inner:hover .tile {
+    opacity: 0.3;
+  }
+  .row__inner:hover .tile:hover {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 1;
+  }
+  .tile:hover ~ .tile {
+    -webkit-transform: translate3d(125px, 0, 0);
+            transform: translate3d(125px, 0, 0);
+  }
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1001; /* Sit on top */
+  top: 50px;
+  left:0px;
+  width: 300px;
+  height: 215px;
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 90%;
+  
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: red;
+  background-color: black;
+  opacity: .4;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+.hovereffect {
+  width:200px;
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 200px;
+  height: 120px;
+  position: absolute;
+  overflow: hidden;
+  font-family: 'K2D',sans-serif;
+  top: 0;
+  left: 0;
+}
+
+.hovereffect img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+.imgg{
+  max-width: 40px;
+  max-height: 50px;
+}
+.hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+  filter: grayscale(1) blur(3px);
+  -webkit-filter: grayscale(1) blur(3px);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.hovereffect h2 {
+  text-align: center;
+  position: relative;
+  margin-top:0;
+  padding-top:0;
+  font-size: 11px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hovereffect p.info {
+  display: inline-block;
+  text-decoration: none;
+  padding:0;
+  margin: 10px 0 0 0;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+}
+
+.hovereffect p.info:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+.hovereffect p.info, .hovereffect h2 {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.hovereffect:hover p.info, .hovereffect:hover h2 {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
