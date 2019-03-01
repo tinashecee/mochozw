@@ -85,7 +85,6 @@
     "body-parse": "^0.1.0",
     "body-parser": "^1.18.3",
     "codelyzer": "~4.5.0",
-    "enhanced-resolve": "3.3.0",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "filter-env": "^1.1.2",
