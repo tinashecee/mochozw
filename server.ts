@@ -136,7 +136,7 @@ app.post('/authorize3', (req,res)=>{
                  res.json({ data:JSON.parse(body.body).statuses});
              }
          })
-    }
+    } 
       }
       
   )
